@@ -23,7 +23,7 @@ const addOrganization = async (req, res) => {
                     res.status(200).json(organization.organizationName + " added successfully!");
                 });
             }
-        })
+        }).clone();
     } catch (error) {
         logger.error(`Error in addOrganization ${error}`);
         res.status(504).json('Something went wrong!')
